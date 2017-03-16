@@ -79,22 +79,6 @@ int isolate(Point *test[]){
 		return 1;
 }
 
-void slightstep(Point **lines[], Point **rows[]){
-	for(int i = 0; i < size; i++){
-		isolate(lines[i]); //rows doesn't work... lol. i get lots of dupes. figure out why?
-		//either that or learn to alternate basic w/ slightstep
-	}
-	/*for(int i = 0; i < size; i++){
-		isolate(rows[i]);
-	}
-	/*
-	int counter = 1;
-	while(counter != 0){
-		counter = 0;
-			
-	}*/
-}
-
 int main(int argc, char* argv[]){
 	
 	Point board[size][size];
@@ -156,8 +140,6 @@ int main(int argc, char* argv[]){
 	}
 
 	basicstep(lines, boxes, rows);
-
-  	//slightstep(lines, rows);
   	for(int i = 0; i < size; i++){
   		isolate(lines[i]);
   	}
